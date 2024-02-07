@@ -17,12 +17,14 @@ document.head.appendChild(fontLink);
 const bodyStyle = document.querySelector('body');
 bodyStyle.style.fontFamily = "'Montserrat', sans-serif";
 bodyStyle.style.color = '#2e2f42';
+
 // Отримуємо елемент #categories
 const categoriesList = document.getElementById('categories');
 // Отримуємо всі елементи .item у списку #categories
 const categoryItems = categoriesList.querySelectorAll('.item');
 // Виводимо кількість категорій в консоль
 console.log(`Number of categories: ${categoryItems.length}`);
+
 // Проходимо по кожному елементу .item та додаємо до них стилі
 categoryItems.forEach(categoryItem => {
   categoryItem.style.backgroundColor = '#f6f6fe';
@@ -31,6 +33,7 @@ categoryItems.forEach(categoryItem => {
   categoryItem.style.width = '392px';
   categoryItem.style.height = 'auto';
   categoryItem.style.marginBottom = '24px';
+
   // Отримуємо текст h2 для кожної категорії
   const categoryName = categoryItem.querySelector('h2').textContent;
 
