@@ -19,7 +19,7 @@ bodyStyle.style.fontFamily = "'Montserrat', sans-serif";
 bodyStyle.style.color = '#2e2f42';
 
 // Отримуємо елемент #categories
-const categoriesList = document.getElementById('categories');
+const categoriesList = document.querySelector('#categories');
 // Отримуємо всі елементи .item у списку #categories
 const categoryItems = categoriesList.querySelectorAll('.item');
 // Виводимо кількість категорій в консоль

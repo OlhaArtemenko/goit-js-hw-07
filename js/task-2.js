@@ -30,6 +30,7 @@ list.style.display = 'flex';
 list.style.flexWrap = 'wrap';
 list.style.columnGap = '24px';
 list.style.rowGap = '48px';
+list.style.paddingLeft = '0';
 
 // Отримуємо і створюємо елементи li через insertAdjacentHTML
 const listItem = images
