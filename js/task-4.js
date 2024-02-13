@@ -13,7 +13,7 @@ fontLink.rel = 'stylesheet';
 fontLink.href =
   'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap';
 document.head.appendChild(fontLink);
-// Додаємо шрифт і колір в body
+// Отримуємо елементи body, додаємо шрифт і колір
 const bodyStyle = document.querySelector('body');
 bodyStyle.style.fontFamily = "'Montserrat', sans-serif";
 bodyStyle.style.color = '#2e2f42';
