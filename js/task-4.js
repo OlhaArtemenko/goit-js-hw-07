@@ -49,10 +49,10 @@ inputs.forEach(input => {
   input.style.padding = '8px 16px';
   input.style.color = '#2e2f42';
   input.style.border = '1px solid #808080';
+  input.style.outline = 'transparent';
   // Додаємо стилі при наведенні
   input.addEventListener('mouseover', function () {
     input.style.border = '1px solid #000';
-    input.style.outline = 'transparent';
   });
   // Повертаємо стилі при відведенні
   input.addEventListener('mouseout', function () {
@@ -75,6 +75,7 @@ btn.style.fontWeight = '500';
 btn.style.color = '#fff';
 btn.style.marginTop = '8px';
 btn.textContent = 'Log in';
+btn.style.cursor = 'pointer';
 // Додаємо стилі при наведенні
 btn.addEventListener('mouseover', function () {
   btn.style.backgroundColor = '#6c8cff';

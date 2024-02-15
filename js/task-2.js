@@ -24,13 +24,8 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
-// Отримуємо елемент gallery і додаємо стилі
+// Отримуємо елемент gallery
 const list = document.querySelector('.gallery');
-list.style.display = 'flex';
-list.style.flexWrap = 'wrap';
-list.style.columnGap = '24px';
-list.style.rowGap = '48px';
-list.style.paddingLeft = '0';
 
 // Отримуємо і створюємо елементи li через insertAdjacentHTML
 const listItem = images
@@ -48,16 +43,23 @@ items.forEach(item => {
 });
 
 // Створюємо новий div елемент
-const divForList = document.createElement('div');
 // Додаємо клас до нового div елементу
-divForList.classList.add('gallery-container');
 // Вставляємо ul елемент внутрішнім вмістом нового div елементу
+const divForList = document.createElement('div');
+divForList.classList.add('gallery-container');
 divForList.appendChild(list);
 // Отримуємо посилання на body елемент
-const bodyElement = document.body;
 // Вставляємо новий div елемент перед скриптом
+const bodyElement = document.body;
 bodyElement.insertBefore(divForList, document.querySelector('script'));
-// Додаємо стилі до div елемента
+
+// Стилі
+list.style.display = 'flex';
+list.style.flexWrap = 'wrap';
+list.style.columnGap = '24px';
+list.style.rowGap = '48px';
+list.style.paddingLeft = '0';
+
 divForList.style.width = '1440px';
 divForList.style.height = '848px';
 divForList.style.padding = '100px 156px';

@@ -29,18 +29,29 @@ formInput.style.letterSpacing = '0.04em';
 formInput.style.color = '#2e2f42';
 formInput.style.border = '1px solid #808080';
 formInput.style.borderRadius = '4px';
+formInput.style.outline = 'transparent';
+// Додаємо стилі при наведенні на formInput
+formInput.addEventListener('mouseover', function () {
+  formInput.style.border = '1px solid #000';
+});
+// Повертаємо стилі при відведенні
+formInput.addEventListener('mouseout', function () {
+  formInput.style.border = '1px solid #808080';
+});
+// Повертаємо стилі при активному стані formInput
+formInput.addEventListener('mousedown', function () {
+  formInput.style.border = '1px solid #808080';
+});
 
-// Отримуємо значення елемента #name-output та додаємо стилі
+// Отримуємо значення елемента #name-output
 const nameOutput = document.querySelector('#name-output');
 // Створюємо EventListener
+// Отримуємо поточне значення з input та очищаємо його від пробілів по краях
+// Перевірка, чи input не є порожнім або не містить лише пробіли
+// Підставляємо значення в span#name-output
 formInput.addEventListener('input', event => {
-  // Отримуємо поточне значення з input та очищаємо його від пробілів по краях
   const inputValue = event.currentTarget.value.trim();
-
-  // Перевірка, чи input не є порожнім або не містить лише пробіли
   const outputValue = inputValue !== '' ? inputValue : 'Anonymous';
-
-  // Підставляємо значення в span#name-output
   nameOutput.textContent = outputValue;
 });
 // Отримуємо значення елемента h1 та додаємо стилі

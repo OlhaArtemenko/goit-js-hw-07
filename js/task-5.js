@@ -33,6 +33,7 @@ btnChangeColor.addEventListener('click', () => {
   colorSpan.textContent = randomColor;
 });
 
+// Стилі
 bodyStyle.style.fontFamily = "'Montserrat', sans-serif";
 bodyStyle.style.color = '#2e2f42';
 bodyStyle.style.fontWeight = '400';
@@ -51,6 +52,7 @@ btnChangeColor.style.background = '#4e75ff';
 btnChangeColor.style.color = '#fff';
 btnChangeColor.style.fontWeight = '500';
 btnChangeColor.style.border = 'none';
+btnChangeColor.style.cursor = 'pointer';
 // Додаємо стилі при наведенні на кнопку
 btnChangeColor.addEventListener('mouseover', function () {
   btnChangeColor.style.backgroundColor = '#6c8cff';
