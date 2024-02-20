@@ -26,7 +26,6 @@ const images = [
 ];
 // Отримуємо елемент gallery
 const list = document.querySelector('.gallery');
-
 // Отримуємо і створюємо елементи li через insertAdjacentHTML
 const listItem = images
   .map(
@@ -35,32 +34,8 @@ const listItem = images
   )
   .join('');
 list.insertAdjacentHTML('beforeend', listItem);
-
 // Отримуємо усі елементи list-item і додаємо ширину для сітки
 const items = document.querySelectorAll('.list-item');
 items.forEach(item => {
   item.style.width = 'calc((100% - 48px) / 3)';
 });
-
-// Створюємо новий div елемент
-// Додаємо клас до нового div елементу
-// Вставляємо ul елемент внутрішнім вмістом нового div елементу
-const divForList = document.createElement('div');
-divForList.classList.add('gallery-container');
-divForList.appendChild(list);
-// Отримуємо посилання на body елемент
-// Вставляємо новий div елемент перед скриптом
-const bodyElement = document.body;
-bodyElement.insertBefore(divForList, document.querySelector('script'));
-
-// Стилі
-list.style.display = 'flex';
-list.style.flexWrap = 'wrap';
-list.style.columnGap = '24px';
-list.style.rowGap = '48px';
-list.style.paddingLeft = '0';
-
-divForList.style.width = '1440px';
-divForList.style.height = '848px';
-divForList.style.padding = '100px 156px';
-divForList.style.backgroundColor = '#fff';
